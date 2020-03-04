@@ -10,7 +10,7 @@ export default () => {
     const [name, setName] = useState('')
     const [surname, setSurname] = useState('')
     const [Major, setMajor] = useState('')
-    const [GPA, setGpa] = useState(0)
+    const [GPA, setGpa] = useState(null)
 
     useEffect(() => {
         getStudents()
@@ -68,10 +68,10 @@ export default () => {
             return students.map((student, index) => {
                 return (
                     <div className="dfr">
-                        <Card style={{ width: '18rem' }}>
+                        <Card key={index} style={{ width: '18rem' }}>
                             <Card.Body>
                                 <Card.Title>Students : {index + 1}</Card.Title>
-                                <ul key={index}>
+                                <ul>
                                     <Card.Text>
                                         <p>ID: {student.id}</p>
                                         <p>NAME: {student.name}</p>
@@ -90,7 +90,7 @@ export default () => {
                 )
             })
         else {
-            return (<h2> No bear </h2>)
+            return (<h2 className="dfr2"> No Students </h2>)
         }
     }
     return (
@@ -104,13 +104,15 @@ export default () => {
                 <div className="dfr2">
                     <Card style={{ width: '18rem' }}>
                         <Card.Body>
-                        <Card.Title>Get Student</Card.Title>
+                            <Card.Title>Get Student</Card.Title>
                             <Card.Text>
-                                <p>ID: {id}</p>
-                                <p>NAME: {name}</p>
-                                <p>Surname: {surname}</p>
-                                <p>Major: {Major}</p>
-                                <p>GPA: {GPA}</p>
+                                <div>
+                                    <p className="row2">ID:<p className="color-p">{id}</p></p>
+                                    <p className="row2">NAME:<p className="color-p">{name}</p></p>
+                                    <p className="row2">Surname:<p className="color-p">{surname}</p></p>
+                                    <p className="row2">Major:<p className="color-p">{Major}</p></p>
+                                    <p className="row2">GPA:<p className="color-p">{GPA}</p></p>
+                                </div>
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -118,7 +120,7 @@ export default () => {
                 <div className="dfr2">
                     <Card style={{ width: '18rem' }}>
                         <Card.Body>
-                        <Card.Title>ADD Student</Card.Title>
+                            <Card.Title>ADD Student</Card.Title>
                             <Card.Text>
                                 <input
                                     placeholder="Enter ID"
@@ -151,7 +153,9 @@ export default () => {
                                     name="GPA"
                                     onChange={(e) => setGpa(e.target.value)}
                                 /><br />
-                                <Button onClick={addStudent} variant="outline-success">Add Student</Button>
+                                <div className="btn-dfr">
+                                    <Button onClick={addStudent} variant="outline-success">Add Student</Button>
+                                </div>
                             </Card.Text>
                         </Card.Body>
                     </Card>

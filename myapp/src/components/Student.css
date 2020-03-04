@@ -1,5 +1,12 @@
 .row {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row2 {
+    display: flex;
+    margin: 0px;
 }
 
 .dfr {
@@ -14,4 +21,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 50px;
+}
+
+.btn-dfr {
+    margin-top: 10px;
+}
+
+.clm {
+    display: flex;
+    flex-direction: column;
+}
+.color-p{
+    color: #3498DB ;
 }

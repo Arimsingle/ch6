@@ -11,8 +11,8 @@ app.use('/api', bodyParser.urlencoded({ extended: false }), router);
 
 let students = [
     { 'id': 6035512059, 'name': 'Arima', 'surname': 'Aimer', 'Major': 'CoE', 'GPA': 4.00 },
-    { 'id': 6035512059, 'name': 'Arima', 'surname': 'Aimer', 'Major': 'CoE', 'GPA': 4.00 },
-    { 'id': 6035512059, 'name': 'Arima', 'surname': 'Aimer', 'Major': 'CoE', 'GPA': 4.00 }
+    { 'id': 6035512060, 'name': 'Aimer', 'surname': 'Arima', 'Major': 'CoE', 'GPA': 4.00 },
+    { 'id': 6035512061, 'name': 'Arim', 'surname': 'Aimer', 'Major': 'CoE', 'GPA': 4.00 }
 ];
 
 router.route('/students')
