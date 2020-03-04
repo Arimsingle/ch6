@@ -1,0 +1,17 @@
+.row {
+    display: flex;
+}
+
+.dfr {
+    margin-left: 30px;
+}
+
+.dfr2 {
+    margin-left: 15px;
+}
+
+.row-cnt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
